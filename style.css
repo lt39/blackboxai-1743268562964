@@ -1,0 +1,48 @@
+/* Additional styles to complement Tailwind */
+body {
+    scroll-behavior: smooth;
+}
+
+/* Animation for table rows */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#registrationsTable tbody tr {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    #registrationsTable th, 
+    #registrationsTable td {
+        padding: 0.5rem;
+        font-size: 0.875rem;
+    }
+    
+    button {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Button hover effects */
+button:hover {
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}
+
+/* Form input focus effects */
+input:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    transition: all 0.2s ease;
+}
+
+/* Status badge animation */
+[class*="bg-"] {
+    transition: all 0.3s ease;
+}
